@@ -1,32 +1,70 @@
-# Ex.No:5(D) IS-A RELATIONSHIP AND HAS-A RELATIONSHIP
+# Ex.No:5(D) THREAD PRIORITY
+
+## QUESTION:
+Write a java program for determine the priority and name of the current thread.
+
+Note : Read the threadname from the User
+
+For example:
+
+<img width="452" height="173" alt="image" src="https://github.com/user-attachments/assets/b804ea94-d472-424e-846c-7d5c56dad26d" />
+
+
+
+
 ## AIM:
-   To Create a java program to find factorial of number using class and object concepts and apply the has-a relationship.
- 
+To write a Java program that reads a thread name from the user and displays the current thread’s name and priority.
+
+
 ## ALGORITHM :
-1.	Start the Program
-2.	Define class `A`:
--	a) Declare integer `n` and initialize `fact` to 1
--	b) Define method `factorial(int n)`:
--	i) Set `this.n = n`
--	ii) Use a loop from 1 to `n` to calculate `fact = fact * i`
--	iii) Print "Factorial is:" followed by `fact`
-3.	In `main` class `main` method:
--	a) Use `Scanner` to read integer `n`
--	b) Create an `A` object and call `factorial(n)`
-4.	End
+1.	Start the program.
+2.	Import the necessary package 'java.util'
+3.	Read the thread name from the user.
+4.	Get the current thread using Thread.currentThread().
+5.	Set the thread’s name using setName().
+6.	Display the thread’s priority using getPriority().
+7.	Display the thread’s name using getName().
+8.	Display the thread’s details using toString().
+9.	Stop the program.
+
+
 
 ## PROGRAM:
  ```
 /*
-Program to implement a IS-A RELATIONSHIP AND HAS-A RELATIONSHIP using Java
-Developed by: 
-RegisterNumber:  
+Program to implement a Thread Priority Concept using Java
+Developed by: JESLIN GNANASHEELA M
+RegisterNumber:  212222040062
 */
 ```
 
-## Sourcecode.java:
+## SOURCE CODE:
 
+```
+import java.util.Scanner;
 
+public class ThreadInfo {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Read thread name from user
+        String threadName = sc.nextLine();
+
+        // Get the current thread
+        Thread current = Thread.currentThread();
+
+        // Set the thread name
+        current.setName(threadName);
+
+        // Display results
+        System.out.println("Priority of Thread: " + current.getPriority());
+        System.out.println("Name of Thread: " + current.getName());
+        System.out.println(current.toString());
+
+        sc.close();
+    }
+}
+```
 
 
 
@@ -34,7 +72,10 @@ RegisterNumber:
 
 ## OUTPUT:
 
+<img width="878" height="487" alt="image" src="https://github.com/user-attachments/assets/77faf07c-c60d-43f9-9d80-6cdaf0b4e8de" />
 
 
 ## RESULT:
-Thus the java program to find factorial of number using class and object concepts and apply the has-a relationship was executed successfully.
+
+The program successfully sets the name of the current thread and prints its priority, name, and details.
+
